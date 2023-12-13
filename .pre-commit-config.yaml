@@ -1,0 +1,12 @@
+default_language_version:
+  python: python3.10
+repos:
+  - repo: https://github.com/markdownlint/markdownlint
+    rev: v0.13.0
+    hooks:
+    - id: markdownlint
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.1.7
+    hooks:
+    - id: ruff
+    - id: ruff-format
