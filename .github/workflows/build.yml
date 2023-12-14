@@ -38,7 +38,7 @@ jobs:
           virtualenvs-create: false
       - name: Install Dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-        run: poetry install --no-interaction --no-root --with test
+        run: poetry install --no-interaction --no-root --with=test
       - name: Install Project
         run: poetry install --no-interaction --only-root
       - name: Run tests
