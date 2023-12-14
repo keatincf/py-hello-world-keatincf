@@ -44,4 +44,11 @@ jobs:
       - name: Run tests
         run: |
           pytest test --cov=py_hello_world_keatincf
+      - name: Package
+        run: poetry build
+      - name: Store Package
+        uses: actions/upload-artifact@v4
+        with:
+          name: py-hello-world-keatincf-package-distributions
+          path: dist/
 
