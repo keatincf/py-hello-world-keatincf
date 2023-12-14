@@ -23,11 +23,11 @@ jobs:
           version: 1.7.1
           virtualenvs-create: false
       - name: Markdown Lint
-        uses: articulate/actions-markdown-lint@v1
+        uses: articulate/actions-markdownlint@v1
         with:
           files: '**/*.md'
           version: v0.38.0
       - name: Ruff Python Lint
-        uses: jpretrucciani/ruff-check@0.1.8
+        uses: jpetrucciani/ruff-check@0.1.8
         with:
           path: py_hello_world_keatincf
