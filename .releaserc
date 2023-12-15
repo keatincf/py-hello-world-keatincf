@@ -23,7 +23,8 @@
           "poetry.lock",
           "requirements.dep.txt"
         ],
-        "message": "chore(release): ${nextRelease.version}  \n\n${nextRelease.notes}"
+        "message": "chore(release): ${nextRelease.version}  \n\n${nextRelease.notes}",
+        "forcePush": true
       }
     ]
   ]
