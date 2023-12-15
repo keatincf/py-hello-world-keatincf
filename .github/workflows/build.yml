@@ -51,4 +51,6 @@ jobs:
         with:
           name: py-hello-world-keatincf-package-distributions
           path: dist/
+      - name: Semantic Release
+        uses: cycjimmy/semantive-release-action@v4
 
