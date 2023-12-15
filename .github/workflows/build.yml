@@ -17,7 +17,6 @@ jobs:
         uses: articulate/actions-markdownlint@v1
         with:
           files: '**/*.md'
-          version: 0.38.0
       - name: Ruff Python Lint
         uses: jpetrucciani/ruff-check@0.1.8
         with:
