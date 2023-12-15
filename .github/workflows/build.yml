@@ -37,7 +37,7 @@ jobs:
           version: 1.7.1
           virtualenvs-create: false
       - name: Install Dependencies
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        if: ${{ steps.cached-poetry-dependencies.outputs.cache-hit }} != 'true'
         run: poetry install --no-interaction --no-root --with=test
       - name: Install Project
         run: poetry install --no-interaction --only-root
@@ -51,4 +51,20 @@ jobs:
         with:
           name: py-hello-world-keatincf-package-distributions
           path: dist/
+  release:
+    runs-on: ubuntu-latest
+    needs: [lint, test]
+    if: ${{ needs.lint.result }} == 'success' && ${{ needs.test.result }} == 'success' && ${{ github.event.head_commit.message }} !~ ^chore\(release\):(.*)$
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v4
+        with:
+          extra_plugins: |
+            @semantic-release/commit-analyzer
+            @semantic-release/release-notes-generator
+            @semantic-release/changelog
+            @semantic-release/exec
+            @semantic-release/git
 
