@@ -70,6 +70,8 @@ jobs:
           virtualenvs-create: false
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v4
+        env:
+          GITHUB_TOKEN: $${{ secrets.GITHUB_TOKEN }}
         with:
           extra_plugins: |
             @semantic-release/commit-analyzer
