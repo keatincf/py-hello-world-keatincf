@@ -17,11 +17,6 @@ jobs:
     permissions:
       id-token: write
     steps:
-      - name: Debug
-        run: |
-          echo ${{ github.event.workflow_run.conclusion}}
-          echo ${{ github.event.workflow_run.head_commit.message }}
-          echo ${{ startsWith(github.event.workflow_run.head_commit.message, 'chore(release):') }}
       - name: Download all the dists
         uses: actions/download-artifact@v4
         with:
