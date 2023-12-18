@@ -32,12 +32,17 @@ jobs:
           inputs: >-
             ./dist/*.tar.gz
             ./dist/*.whl
+      - name: Get Version
+        id: ver
+        run: echo "version=$(cat VERSION)" >> $GITHUB_OUTPUT
       - name: Create Github Release
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: |
-          version=${cat ./VERSION}
-          gh release create $version --repo '${{ github.repository }}' --notes-file ./CHANGELOG.md
+        run: >-
+          gh release create
+          ${{ steps.ver.outputs.version }}
+          --repo '${{ github.repository }}'
+          --notes-file ./CHANGELOG.md
       - name: Upload artifacts for Github Release
         env:
           GITHUB_TOKEN: ${{ github.token }}
