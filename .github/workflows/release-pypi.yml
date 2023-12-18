@@ -8,7 +8,44 @@ on:
       - completed
 
 jobs:
-  publish:
+  github-release:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && startsWith(github.event.workflow_run.head_commit.message, 'chore(release):') }}
+    environment:
+      name: Release
+    permissions:
+      id-token: write
+    steps:
+      - name: Download all the dists
+        uses: actions/download-artifact@v4
+        with:
+          run-id: ${{ github.event.workflow_run.id }}
+          name: py-hello-world-keatincf-package-distributions
+          github-token: ${{ secrets.RELEASE_TOKEN }}
+          path: dist/
+      - name: Sign the dists
+        uses: sigstore/gh-action-sigstore-python@v2.1.1
+        with:
+          inputs: >-
+            ./dist/*.tar.gz
+            ./dist/*.whl
+      - name: Create Github Release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: >-
+          gh release create
+          '${{ github.ref_name }}'
+          --repo '${{ github.repository }}'
+          --notes-file ./CHANGELOG.md
+      - name: Upload artifacts for Github Release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: >-
+          gh release upload
+          '${{ github.ref_name }}' dist/**
+          --repo '${{ github.repository }}'
+  publish-to-testpypi:
+    name: Publish Python distribution to TestPyPI
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && startsWith(github.event.workflow_run.head_commit.message, 'chore(release):') }}
     environment:
@@ -24,4 +61,7 @@ jobs:
           name: py-hello-world-keatincf-package-distributions
           github-token: ${{ secrets.RELEASE_TOKEN }}
           path: dist/
-
+      - name: Publish to TestPyPI
+        uses: pypa/gh-action-pypi-publish@v1.8.11
+        with:
+          repository-url: https://test.pypi.org/legacy/
