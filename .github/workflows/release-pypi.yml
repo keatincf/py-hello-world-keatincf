@@ -37,7 +37,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: >-
           gh release create
-          '${ cat ./VERSION }'
+          ${ cat ./VERSION }
           --repo '${{ github.repository }}'
           --notes-file ./CHANGELOG.md
       - name: Upload artifacts for Github Release
