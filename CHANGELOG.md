@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/keatincf/py-hello-world-keatincf/compare/v1.0.1...v1.0.2) (2023-12-18)
+
+
+### Bug Fixes
+
+* **docs:** update README with info on where the project is published ([acfb8b8](https://github.com/keatincf/py-hello-world-keatincf/commit/acfb8b8b43cb19aa967df906b16959758dc64c75))
+
 ## [1.0.1](https://github.com/keatincf/py-hello-world-keatincf/compare/v1.0.0...v1.0.1) (2023-12-18)
 
 
