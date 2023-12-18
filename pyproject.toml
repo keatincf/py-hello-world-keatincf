@@ -4,6 +4,7 @@ version = "1.0.2"
 description = "A Hello World project to test out Github CI/CD"
 authors = ["Charles Keating <Charles.Keating@udri.udayton.edu>"]
 readme = "README.md"
+repository = "https://github.com/keatincf/py-hello-world-keatincf"
 
 [tool.poetry.dependencies]
 python = ">=3.9"
