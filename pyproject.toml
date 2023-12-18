@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "py-hello-world-keatincf"
-version = "1.0.0"
+version = "1.0.1"
 description = "A Hello World project to test out Github CI/CD"
 authors = ["Charles Keating <Charles.Keating@udri.udayton.edu>"]
 readme = "README.md"
