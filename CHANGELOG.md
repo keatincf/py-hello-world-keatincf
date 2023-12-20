@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/keatincf/py-hello-world-keatincf/compare/v1.0.7...v1.1.0) (2023-12-20)
+
+
+### Features
+
+* **ops:** Added a new feature to perform square of a sum ([b28deda](https://github.com/keatincf/py-hello-world-keatincf/commit/b28deda0e56866b2344c0a164ffed95f1105fe63))
+
 ## [1.0.7](https://github.com/keatincf/py-hello-world-keatincf/compare/v1.0.6...v1.0.7) (2023-12-18)
 
 
