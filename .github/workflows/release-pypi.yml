@@ -13,9 +13,6 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && startsWith(github.event.workflow_run.head_commit.message, 'chore(release):') }}
     environment:
       name: Release
-    permissions:
-      contents: write
-      id-token: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -57,8 +54,6 @@ jobs:
     environment:
       name: Release
       url: https://test.pypi.org/p/py-hello-world-keatincf
-    permissions:
-      id-token: write
     steps:
       - name: Download all the dists
         uses: actions/download-artifact@v4
