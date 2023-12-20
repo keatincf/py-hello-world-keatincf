@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/keatincf/py-hello-world-keatincf/compare/v1.1.0...v1.1.1) (2023-12-20)
+
+
+### Bug Fixes
+
+* **main:** fixed issue with main not calling new feature ([6d037f7](https://github.com/keatincf/py-hello-world-keatincf/commit/6d037f7078e04bc536f43a11168d98c055c71c60))
+
 # [1.1.0](https://github.com/keatincf/py-hello-world-keatincf/compare/v1.0.7...v1.1.0) (2023-12-20)
 
 
