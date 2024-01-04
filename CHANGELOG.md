@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/keatincf/py-hello-world-keatincf/compare/v1.1.2...v1.1.3) (2024-01-04)
+
+
+### Bug Fixes
+
+* **cicd:** seeing if the next version is v1.1.3 ([0f447a1](https://github.com/keatincf/py-hello-world-keatincf/commit/0f447a1abb03e4e595f2de991fdf15621203e980))
+
 ## [1.1.1](https://github.com/keatincf/py-hello-world-keatincf/compare/v1.1.0...v1.1.1) (2023-12-20)
 
 
