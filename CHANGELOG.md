@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/keatincf/py-hello-world-keatincf/compare/v1.3.0...v1.3.1) (2024-01-09)
+
+
+### Bug Fixes
+
+* adjust statement ([60444fd](https://github.com/keatincf/py-hello-world-keatincf/commit/60444fdeb3fdcf8f47b3f16faadadb59121c65e5))
+
 # [1.2.0](https://github.com/keatincf/py-hello-world-keatincf/compare/v1.1.3...v1.2.0) (2024-01-09)
 
 
