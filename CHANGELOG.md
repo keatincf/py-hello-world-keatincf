@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/keatincf/py-hello-world-keatincf/compare/v1.1.3...v1.2.0) (2024-01-09)
+
+
+### Bug Fixes
+
+* adjust print statement ([a22da98](https://github.com/keatincf/py-hello-world-keatincf/commit/a22da9802be7c1d220099f43e2727ca40be72be4))
+
+
+### Features
+
+* add extra print ([7f94e75](https://github.com/keatincf/py-hello-world-keatincf/commit/7f94e7587fde642d1635e37bb8d2b80ab40e4cb9))
+
 ## [1.1.3](https://github.com/keatincf/py-hello-world-keatincf/compare/v1.1.2...v1.1.3) (2024-01-04)
 
 
