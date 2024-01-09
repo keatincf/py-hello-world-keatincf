@@ -12,7 +12,7 @@ def sum() -> np.ndarray:
     a = np.ndarray(shape=(2, 2), buffer=np.array([[1, 0], [0, 1]]), dtype=int)
     b = np.ndarray(shape=(2, 2), buffer=np.array([[0, 1], [1, 0]]), dtype=int)
 
-    print("Hello")
+    print("Hello 2")
     return a + b
 
 
