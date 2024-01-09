@@ -14,6 +14,7 @@ def sum() -> np.ndarray:
 
     print("Hello 2")
     print("What about this? 2")
+    print("Another ")
     return a + b
 
 
